@@ -16,13 +16,13 @@ TXL.  It is in the family of program transformation languages."
 
 PKG_NAMES="colm libcolm0.13.0.6 libcolm-devel"
 
-colm_CONTENTS="usr/bin/*.exe usr/share/doc"
+colm_CONTENTS="usr/bin/*.exe usr/share"
 
 libcolm0_13_0_6_SUMMARY="${SUMMARY} (runtime)"
 libcolm0_13_0_6_CONTENTS="usr/bin/cygcolm-0-13-0-6.dll"
 
 libcolm_devel_SUMMARY="${SUMMARY} (devel)"
-libcolm_devel_CONTENTS="usr/include usr/lib usr/share/vim"
+libcolm_devel_CONTENTS="usr/include usr/lib"
 
 DIFF_EXCLUDES="defs.h"
 
