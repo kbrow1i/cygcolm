@@ -1,0 +1,45 @@
+NAME="colm"
+VERSION=0.13.0.6
+RELEASE=1
+
+inherit vim
+
+HOMEPAGE="https://www.colm.net/open-source/colm/"
+SRC_URI="https://www.colm.net/files/${NAME}/${NAME}-${VERSION}.tar.gz"
+PATCH_URI="no_undefined.patch"
+
+CATEGORY="Devel"
+SUMMARY="A program transformation language"
+DESCRIPTION="Colm is a programming language designed for the analysis and
+transformation of computer languages.  Colm is influenced primarily by
+TXL.  It is in the family of program transformation languages."
+
+PKG_NAMES="colm libcolm0.13.0.6 libcolm-devel"
+
+colm_CONTENTS="usr/bin/*.exe usr/share/doc"
+
+libcolm0_13_0_6_SUMMARY="${SUMMARY} (runtime)"
+libcolm0_13_0_6_CONTENTS="usr/bin/cygcolm-0-13-0-6.dll"
+
+libcolm_devel_SUMMARY="${SUMMARY} (devel)"
+libcolm_devel_CONTENTS="usr/include usr/lib usr/share/vim"
+
+DIFF_EXCLUDES="defs.h"
+
+src_compile() {
+    cd ${S}
+    cygautoreconf
+    lndirs
+    cd ${B}
+    cygconf
+    cygmake
+}
+
+src_install() {
+    cd ${B}
+    cyginstall
+    cd ${S}
+    viminto syntax
+    dovim colm.vim
+    rm -f ${D}/usr/share/doc/colm/colm.vim
+}
