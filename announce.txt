@@ -1,0 +1,21 @@
+From cygwin-announce-colm-0.13.0.6-1 Thu Nov 15 18:58:35 2018
+From: Ken Brown <kbrown@cornell.edu>
+To: cygwin-announce@cygwin.com
+Date: Thu, 15 Nov 2018 18:58:35 -0500
+Message-Id: <20181115185835.11708-1-kbrown@cornell.edu>
+Subject: colm 0.13.0.6-1
+
+The following packages have been uploaded to the Cygwin distribution:
+
+* colm-0.13.0.6-1
+* libcolm0.13.0.6-0.13.0.6-1
+* libcolm-devel-0.13.0.6-1
+
+Colm is a programming language designed for the analysis and
+transformation of computer languages.  Colm is influenced primarily by
+TXL.  It is in the family of program transformation languages.
+
+This is a new package in the Cygwin distribution.
+
+Ken Brown
+Cygwin's colm maintainer
